@@ -79,6 +79,13 @@
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
 
+# numeros = [10, 20, 30, 40, 50]
+# minimo = min(numeros)
+# maximo = max(numeros)
+# normalizados = [(x - minimo) / (maximo - minimo) for x in numeros]
+
+# print(normalizados)
+
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
 
@@ -103,4 +110,15 @@
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
 
 ### Exercício 15. Processamento de Dados com Condição de Parada
-# Processar itens de uma lista até encontrar um valor específico que indica a parad
+# Processar itens de uma lista até encontrar um valor específico que indica a parada.
+
+itens = [1, 2, 3, "parar", 4, 5]
+
+i = 0
+while i < len(itens):
+    if itens[i] == "parar":
+        print("Parada encontrada, encerrando o processamento.")
+        break
+    # Processa o item
+    print(f"Processando item: {itens[i]}")
+    i += 1
